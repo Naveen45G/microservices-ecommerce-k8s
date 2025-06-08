@@ -1,0 +1,93 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Ad Service') {
+            steps {
+                script {
+                    load 'Jenkinfiles/adservice'
+                }
+            }
+        }
+
+        stage('Cart Service') {
+            steps {
+                script {
+                    load 'Jenkinfiles/cartservice'
+                }
+            }
+        }
+
+        stage('Checkout Service') {
+            steps {
+                script {
+                    load 'Jenkinfiles/checkoutservice'
+                }
+            }
+        }
+
+        stage('Currency Service') {
+            steps {
+                script {
+                    load 'Jenkinfiles/currencyservice'
+                }
+            }
+        }
+
+        stage('Email Service') {
+            steps {
+                script {
+                    load 'Jenkinfiles/emailservice'
+                }
+            }
+        }
+
+        stage('Frontend') {
+            steps {
+                script {
+                    load 'Jenkinfiles/frontend'
+                }
+            }
+        }
+
+        stage('Load Generator') {
+            steps {
+                script {
+                    load 'Jenkinfiles/loadgenerator'
+                }
+            }
+        }
+
+        stage('Payment Service') {
+            steps {
+                script {
+                    load 'Jenkinfiles/paymentservice'
+                }
+            }
+        }
+
+        stage('Product Catalog Service') {
+            steps {
+                script {
+                    load 'Jenkinfiles/productcatalogservice'
+                }
+            }
+        }
+
+        stage('Recommendation Service') {
+            steps {
+                script {
+                    load 'Jenkinfiles/recommendationservice'
+                }
+            }
+        }
+
+        stage('Shipping Service') {
+            steps {
+                script {
+                    load 'Jenkinfiles/shippingservice'
+                }
+            }
+        }
+    }
+}
