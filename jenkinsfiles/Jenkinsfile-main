@@ -5,7 +5,7 @@ pipeline {
         stage('Ad Service') {
             steps {
                 script {
-                    load 'Jenkinfiles/adservice'
+                    load 'adservice'
                 }
             }
         }
@@ -13,7 +13,7 @@ pipeline {
         stage('Cart Service') {
             steps {
                 script {
-                    load 'Jenkinfiles/cartservice'
+                    load 'cartservice'
                 }
             }
         }
@@ -21,7 +21,7 @@ pipeline {
         stage('Checkout Service') {
             steps {
                 script {
-                    load 'Jenkinfiles/checkoutservice'
+                    load 'checkoutservice'
                 }
             }
         }
@@ -29,7 +29,7 @@ pipeline {
         stage('Currency Service') {
             steps {
                 script {
-                    load 'Jenkinfiles/currencyservice'
+                    load 'currencyservice'
                 }
             }
         }
@@ -37,7 +37,7 @@ pipeline {
         stage('Email Service') {
             steps {
                 script {
-                    load 'Jenkinfiles/emailservice'
+                    load 'emailservice'
                 }
             }
         }
@@ -45,7 +45,7 @@ pipeline {
         stage('Frontend') {
             steps {
                 script {
-                    load 'Jenkinfiles/frontend'
+                    load 'frontend'
                 }
             }
         }
@@ -53,7 +53,7 @@ pipeline {
         stage('Load Generator') {
             steps {
                 script {
-                    load 'Jenkinfiles/loadgenerator'
+                    load 'loadgenerator'
                 }
             }
         }
@@ -61,7 +61,7 @@ pipeline {
         stage('Payment Service') {
             steps {
                 script {
-                    load 'Jenkinfiles/paymentservice'
+                    load 'paymentservice'
                 }
             }
         }
@@ -69,7 +69,7 @@ pipeline {
         stage('Product Catalog Service') {
             steps {
                 script {
-                    load 'Jenkinfiles/productcatalogservice'
+                    load 'productcatalogservice'
                 }
             }
         }
@@ -77,7 +77,7 @@ pipeline {
         stage('Recommendation Service') {
             steps {
                 script {
-                    load 'Jenkinfiles/recommendationservice'
+                    load 'recommendationservice'
                 }
             }
         }
@@ -85,7 +85,7 @@ pipeline {
         stage('Shipping Service') {
             steps {
                 script {
-                    load 'Jenkinfiles/shippingservice'
+                    load 'shippingservice'
                 }
             }
         }
