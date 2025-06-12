@@ -167,7 +167,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/checkoutservice:2
+        image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/recommendationservice:2
         ports:
         - containerPort: 8080
         readinessProbe:
@@ -236,7 +236,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/frontend:2
+          image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/recommendationservice:2
           ports:
           - containerPort: 8080
           readinessProbe:
