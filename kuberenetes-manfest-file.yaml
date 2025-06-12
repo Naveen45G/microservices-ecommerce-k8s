@@ -236,7 +236,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/recommendationservice:2
+          image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/frontend:2
           ports:
           - containerPort: 8080
           readinessProbe:
@@ -552,7 +552,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/cartservice:1
+        image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/frontend:2
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
