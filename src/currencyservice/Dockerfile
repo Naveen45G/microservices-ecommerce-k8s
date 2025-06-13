@@ -27,7 +27,8 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install --only=production
+# RUN npm install --only=production
+RUN rm -rf node_modules package-lock.json && npm install --omit=dev --no-audit --no-fund
 
 FROM base
 
