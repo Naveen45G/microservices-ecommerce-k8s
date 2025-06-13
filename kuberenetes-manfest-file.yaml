@@ -512,7 +512,6 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: loadgenerator
 spec:
   selector:
     matchLabels:
@@ -565,7 +564,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 442426876097.dkr.ecr.ap-south-1.amazonaws.com/loadgenerator:1   #please change the image url according to your account
+        image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/loadgenerator:6
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
