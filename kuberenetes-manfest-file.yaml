@@ -608,7 +608,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 442426876097.dkr.ecr.ap-south-1.amazonaws.com/currencyservice:1   #please change the image url according to your account
+        image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/currencyservice:3
         ports:
         - name: grpc
           containerPort: 7000
@@ -672,7 +672,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/shippingservice:3
+        image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/currencyservice:3
         ports:
         - containerPort: 50051
         env:
