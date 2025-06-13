@@ -345,7 +345,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/frontend:2
+        image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/paymentservice:2
         ports:
         - containerPort: 50051
         env:
@@ -409,7 +409,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/productcatalogservice:2
+        image: 442426876097.dkr.ecr.us-east-1.amazonaws.com/paymentservice:2
         ports:
         - containerPort: 3550
         env:
