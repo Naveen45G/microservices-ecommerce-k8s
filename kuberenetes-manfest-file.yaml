@@ -28,7 +28,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/emailservice:1
+        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/emailservice:1  #please change the image url according to your account
         ports:
         - containerPort: 8080
         env:
@@ -93,7 +93,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/checkoutservice:3
+          image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/checkoutservice:3   #please change the image url according to your account
           ports:
           - containerPort: 5050
           readinessProbe:
@@ -167,7 +167,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/checkoutservice:3
+        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/recommendationservice:1  #please change the image url according to your account
         ports:
         - containerPort: 8080
         readinessProbe:
@@ -236,7 +236,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/recommendationservice:1
+          image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/frontend:1    #please change the image url according to your account
           ports:
           - containerPort: 8080
           readinessProbe:
@@ -345,7 +345,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/paymentservice:1
+        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/paymentservice:1    #please change the image url according to your account
         ports:
         - containerPort: 50051
         env:
@@ -409,7 +409,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/paymentservice:1
+        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/productcatalogservice:1    #please change the image url according to your account
         ports:
         - containerPort: 3550
         env:
@@ -473,7 +473,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/productcatalogservice:1
+        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/cartservice:5   #please change the image url according to your account
         ports:
         - containerPort: 7070
         env:
@@ -512,6 +512,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: loadgenerator
 spec:
   selector:
     matchLabels:
@@ -564,7 +565,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/loadgenerator:1
+        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/loadgenerator:1   #please change the image url according to your account
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
@@ -607,7 +608,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/currencyservice:1
+        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/currencyservice:1   #please change the image url according to your account
         ports:
         - name: grpc
           containerPort: 7000
@@ -671,7 +672,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/currencyservice:1
+        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/shippingservice:1  #please change the image url according to your account
         ports:
         - containerPort: 50051
         env:
@@ -734,7 +735,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/shippingservice:1
+        image: redis:alpine
         ports:
         - containerPort: 6379
         readinessProbe:
@@ -801,7 +802,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/adservice:2
+        image: 471441381803.dkr.ecr.ap-south-1.amazonaws.com/adservice:2    #please change the image url according to your account
         ports:
         - containerPort: 9555
         env:
